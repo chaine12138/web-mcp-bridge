@@ -3,7 +3,7 @@
  *
  *   1. Boot the bridge's WsServer + CallRouter + SessionRegistry in-process.
  *   2. Connect a tiny WebSocket client that speaks the protocol directly
- *      (standing in for @web-mcp/sdk running inside a browser).
+ *      (standing in for web-mcp-sdk running inside a browser).
  *   3. Register a single tool, fire a call from the router, verify the result.
  *
  * This deliberately does NOT spin up the MCP stdio server — that requires a
@@ -18,12 +18,12 @@ import {
   SessionRegistry,
   WsServer,
   createLogger,
-} from '@web-mcp/bridge';
+} from 'web-mcp-bridge';
 import {
   PROTOCOL_VERSION,
   parseMessage,
   serializeMessage,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import WebSocket from 'ws';
 
 const TOKEN = 'e2e-secret';

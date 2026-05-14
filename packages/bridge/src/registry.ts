@@ -2,7 +2,7 @@ import {
   SOFT_OFFLINE_MS,
   TOOL_NAMESPACE_SEP,
   type ToolDescriptor,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import type { Logger } from './logger.js';
 
 /**

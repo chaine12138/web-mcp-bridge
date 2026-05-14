@@ -1,5 +1,5 @@
 /**
- * Public error classes surfaced by `@web-mcp/sdk`.
+ * Public error classes surfaced by `web-mcp-sdk`.
  * Each subclass sets a stable `name` so hosts can branch on `err.name` instead
  * of relying on `instanceof` (which breaks across module duplication).
  */

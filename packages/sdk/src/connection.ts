@@ -6,7 +6,7 @@ import {
   serializeMessage,
   type Message,
   type ToolDescriptor,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import { AuthFailedError, VersionMismatchError } from './errors.js';
 
 /**

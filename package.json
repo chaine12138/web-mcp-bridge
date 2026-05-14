@@ -1,5 +1,5 @@
 {
-  "name": "@web-mcp/bridge",
+  "name": "web-mcp-bridge",
   "version": "0.1.0",
   "private": true,
   "type": "module",

@@ -8,9 +8,9 @@ Local MCP server that forwards tool calls to in-browser host applications over a
 
 | Package | Purpose |
 | --- | --- |
-| [`@web-mcp/bridge`](./packages/bridge) | Node CLI. Runs an MCP stdio server on one side and a localhost WS server on the other. |
-| [`@web-mcp/sdk`](./packages/sdk) | Browser SDK. Exposes `window.agent_tool.registerTool(...)` and speaks the WS protocol. |
-| [`@web-mcp/shared`](./packages/shared) | Internal: protocol constants, types, Zod schemas. |
+| [`web-mcp-bridge`](./packages/bridge) | Node CLI. Runs an MCP stdio server on one side and a localhost WS server on the other. |
+| [`web-mcp-sdk`](./packages/sdk) | Browser SDK. Exposes `window.agent_tool.registerTool(...)` and speaks the WS protocol. |
+| [`web-mcp-shared`](./packages/shared) | Internal: protocol constants, types, Zod schemas. |
 
 ## How it fits together
 
@@ -18,7 +18,7 @@ Local MCP server that forwards tool calls to in-browser host applications over a
  Agent (Qoder/Claude/…)
         │  MCP over stdio
         ▼
-  @web-mcp/bridge  ── WebSocket (127.0.0.1) ──▶  Browser tab
+  web-mcp-bridge  ── WebSocket (127.0.0.1) ──▶  Browser tab
         │                                           │
         └─── aggregates tools ──────────────────────┘
                            the host registered via window.agent_tool.registerTool(...)
@@ -32,7 +32,7 @@ The bridge does not touch the DOM. It forwards the tools each host explicitly re
 
 ```bash
 export WEB_MCP_TOKEN="$(openssl rand -hex 16)"
-npx @web-mcp/bridge --token "$WEB_MCP_TOKEN" --port 7321
+npx web-mcp-bridge --token "$WEB_MCP_TOKEN" --port 7321
 ```
 
 Defaults: bind `127.0.0.1`, port `7321`, log level `info`. The bridge exposes an MCP server over stdio and a WebSocket server for browsers.
@@ -46,7 +46,7 @@ Example for a Qoder-style MCP config (any MCP-capable agent works the same way):
   "mcpServers": {
     "web-mcp-bridge": {
       "command": "npx",
-      "args": ["-y", "@web-mcp/bridge", "--port", "7321"],
+      "args": ["-y", "web-mcp-bridge", "--port", "7321"],
       "env": { "WEB_MCP_TOKEN": "<same value as above>" }
     }
   }
@@ -59,7 +59,7 @@ On first connect the bridge waits up to 3 s for at least one browser session to 
 
 ```ts
 import { z } from 'zod';
-import { createAgentTool } from '@web-mcp/sdk';
+import { createAgentTool } from 'web-mcp-sdk';
 
 const agent = createAgentTool({
   appId: 'lowcode-demo',                // becomes the tool namespace

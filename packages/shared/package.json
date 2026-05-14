@@ -1,8 +1,8 @@
 {
-  "name": "@web-mcp/shared",
+  "name": "web-mcp-shared",
   "version": "0.1.0",
   "type": "module",
-  "description": "Shared protocol types, constants and zod schemas used by @web-mcp/bridge and @web-mcp/sdk.",
+  "description": "Shared protocol types, constants and zod schemas used by web-mcp-bridge and web-mcp-sdk.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {

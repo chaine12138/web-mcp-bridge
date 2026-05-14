@@ -9,7 +9,7 @@ import {
   PROTOCOL_VERSION,
   TARGET_ROUTING_HINT,
   TOOL_NAMESPACE_SEP,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import type { Logger } from './logger.js';
 import type { SessionRegistry } from './registry.js';
 import type { CallRouter } from './router.js';

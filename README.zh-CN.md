@@ -8,9 +8,9 @@
 
 | 包 | 用途 |
 | --- | --- |
-| [`@web-mcp/bridge`](./packages/bridge) | Node CLI。一端运行基于 stdio 的 MCP 服务器，另一端运行 localhost 的 WS 服务器。 |
-| [`@web-mcp/sdk`](./packages/sdk) | 浏览器 SDK。暴露 `window.agent_tool.registerTool(...)` 并实现 WS 协议。 |
-| [`@web-mcp/shared`](./packages/shared) | 内部包：协议常量、类型定义、Zod schema。 |
+| [`web-mcp-bridge`](./packages/bridge) | Node CLI。一端运行基于 stdio 的 MCP 服务器，另一端运行 localhost 的 WS 服务器。 |
+| [`web-mcp-sdk`](./packages/sdk) | 浏览器 SDK。暴露 `window.agent_tool.registerTool(...)` 并实现 WS 协议。 |
+| [`web-mcp-shared`](./packages/shared) | 内部包：协议常量、类型定义、Zod schema。 |
 
 ## 整体架构
 
@@ -18,7 +18,7 @@
  Agent (Qoder/Claude/…)
         │  基于 stdio 的 MCP
         ▼
-  @web-mcp/bridge  ── WebSocket (127.0.0.1) ──▶  浏览器标签页
+  web-mcp-bridge  ── WebSocket (127.0.0.1) ──▶  浏览器标签页
         │                                           │
         └─── 聚合工具 ───────────────────────────────┘
                            宿主通过 window.agent_tool.registerTool(...) 注册
@@ -32,7 +32,7 @@ bridge 不直接操作 DOM，它仅转发宿主显式注册的工具，并把执
 
 ```bash
 export WEB_MCP_TOKEN="$(openssl rand -hex 16)"
-npx @web-mcp/bridge --token "$WEB_MCP_TOKEN" --port 7321
+npx web-mcp-bridge --token "$WEB_MCP_TOKEN" --port 7321
 ```
 
 默认配置：监听 `127.0.0.1`、端口 `7321`、日志级别 `info`。bridge 通过 stdio 暴露 MCP 服务器，同时为浏览器提供 WebSocket 服务器。
@@ -46,7 +46,7 @@ npx @web-mcp/bridge --token "$WEB_MCP_TOKEN" --port 7321
   "mcpServers": {
     "web-mcp-bridge": {
       "command": "npx",
-      "args": ["-y", "@web-mcp/bridge", "--port", "7321"],
+      "args": ["-y", "web-mcp-bridge", "--port", "7321"],
       "env": { "WEB_MCP_TOKEN": "<与上文一致的 token>" }
     }
   }
@@ -59,7 +59,7 @@ npx @web-mcp/bridge --token "$WEB_MCP_TOKEN" --port 7321
 
 ```ts
 import { z } from 'zod';
-import { createAgentTool } from '@web-mcp/sdk';
+import { createAgentTool } from 'web-mcp-sdk';
 
 const agent = createAgentTool({
   appId: 'lowcode-demo',                // 作为工具命名空间

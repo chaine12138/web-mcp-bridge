@@ -14,7 +14,7 @@
 import {
   DEFAULT_BRIDGE_HOST,
   DEFAULT_BRIDGE_PORT,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import { createLogger, type LogLevel } from './logger.js';
 import { McpBridgeServer } from './mcp-server.js';
 import { SessionRegistry } from './registry.js';

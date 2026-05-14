@@ -5,7 +5,7 @@ import {
   buildErrorPayload,
   serializeMessage,
   type ErrorPayload,
-} from '@web-mcp/shared';
+} from 'web-mcp-shared';
 import type { SessionHandle } from './registry.js';
 import type { Logger } from './logger.js';
 
