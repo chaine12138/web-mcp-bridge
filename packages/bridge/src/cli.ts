@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * CLI entry for web-mcp-bridge.
+ * CLI entry for web-page-mcp-bridge.
  *
  * Usage:
- *   web-mcp-bridge --token <secret> [--port 7321] [--host 127.0.0.1] [--log-level info]
+ *   web-page-mcp-bridge --token <secret> [--port 7321] [--host 127.0.0.1] [--log-level info]
  *
  * The bridge:
  *   1. Boots a local WebSocket server (127.0.0.1 only) for browser SDKs.
@@ -14,7 +14,7 @@
 import {
   DEFAULT_BRIDGE_HOST,
   DEFAULT_BRIDGE_PORT,
-} from 'web-mcp-shared';
+} from 'web-page-mcp-shared';
 import { createLogger, type LogLevel } from './logger.js';
 import { McpBridgeServer } from './mcp-server.js';
 import { SessionRegistry } from './registry.js';
@@ -97,10 +97,10 @@ function parseArgs(argv: string[]): CliOptions {
 function printHelp(): void {
   process.stdout.write(
     [
-      'web-mcp-bridge — Local MCP bridge forwarding to in-browser host apps over WebSocket.',
+      'web-page-mcp-bridge — Local MCP bridge forwarding to in-browser host apps over WebSocket.',
       '',
       'Usage:',
-      '  web-mcp-bridge --token <secret> [--port 7321] [--host 127.0.0.1] [--log-level info]',
+      '  web-page-mcp-bridge --token <secret> [--port 7321] [--host 127.0.0.1] [--log-level info]',
       '',
       'Flags:',
       '  --token        Shared secret for SDK↔bridge WS handshake (or env WEB_MCP_TOKEN).',

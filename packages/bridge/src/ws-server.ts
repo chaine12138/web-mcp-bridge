@@ -12,7 +12,7 @@ import {
   serializeMessage,
   type ErrorCode,
   type Message,
-} from 'web-mcp-shared';
+} from 'web-page-mcp-shared';
 import type { Logger } from './logger.js';
 import type { SessionHandle, SessionRegistry } from './registry.js';
 import type { CallRouter } from './router.js';

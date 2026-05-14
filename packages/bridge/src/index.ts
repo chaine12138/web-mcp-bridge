@@ -1,5 +1,5 @@
 /**
- * Public surface of `web-mcp-bridge` for programmatic use and testing.
+ * Public surface of `web-page-mcp-bridge` for programmatic use and testing.
  * The production entry point is `cli.ts`.
  */
 

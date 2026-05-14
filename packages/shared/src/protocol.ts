@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { ERROR_CODES } from './errors.js';
 
 /**
- * Wire messages exchanged between web-mcp-bridge (Node) and web-mcp-sdk (browser)
+ * Wire messages exchanged between web-page-mcp-bridge (Node) and web-page-mcp-sdk (browser)
  * over a single WebSocket. Each payload is a JSON object with a discriminant `type`.
  */
 

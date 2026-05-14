@@ -1,6 +1,6 @@
 {
-  "name": "web-mcp-bridge",
-  "version": "0.1.0",
+  "name": "web-page-mcp-bridge",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "Bridge local MCP server and in-browser host apps via WebSocket, so AI agents can call business APIs the host explicitly registers.",

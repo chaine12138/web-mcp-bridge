@@ -8,8 +8,8 @@
     "run": "node --experimental-vm-modules --import tsx/esm ./src/main.ts"
   },
   "dependencies": {
-    "web-mcp-bridge": "workspace:*",
-    "web-mcp-shared": "workspace:*",
+    "web-page-mcp-bridge": "workspace:*",
+    "web-page-mcp-shared": "workspace:*",
     "ws": "^8.18.0"
   },
   "devDependencies": {

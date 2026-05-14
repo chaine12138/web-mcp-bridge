@@ -5,9 +5,9 @@ The project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html
 
 ## [0.1.0] — unreleased
 
-First cut, matching OpenSpec change `init-web-mcp-bridge`.
+First cut, matching OpenSpec change `init-web-page-mcp-bridge`.
 
-### Added — `web-mcp-bridge`
+### Added — `web-page-mcp-bridge`
 - Localhost-only WebSocket server (`127.0.0.1`) with token handshake, protocol-version negotiation, and 15 s/30 s heartbeat contract.
 - MCP stdio server that aggregates tools from every connected host session.
 - `<appId>__<toolName>` namespace exposed to the agent; resolution strips the prefix before fanning out to the host.
@@ -15,9 +15,9 @@ First cut, matching OpenSpec change `init-web-mcp-bridge`.
 - `SessionRegistry` with 2 s soft-offline window (page-reload-safe) and "newest instance wins" policy.
 - Built-in `__bridge__health` tool returning live session / tool counts.
 - Structured JSON logs to stderr; stdout reserved for MCP stdio.
-- CLI: `web-mcp-bridge --token ... [--port 7321] [--host 127.0.0.1] [--log-level info]`.
+- CLI: `web-page-mcp-bridge --token ... [--port 7321] [--host 127.0.0.1] [--log-level info]`.
 
-### Added — `web-mcp-sdk`
+### Added — `web-page-mcp-sdk`
 - `createAgentTool(options)` single-instance factory; attaches to `window.agent_tool` by default.
 - `window.agent_tool.registerTool({ name, description, inputSchema, handler })` as the **only** registration entry point. No auto-scanning / reflection / OpenAPI derivation.
 - Zod → JSON Schema conversion on registration.
@@ -26,7 +26,7 @@ First cut, matching OpenSpec change `init-web-mcp-bridge`.
 - Typed event emitter: `connected / disconnected / error / toolCallStart / toolCallEnd`.
 - Public error classes with stable `name` strings for `err.name` branching.
 
-### Added — `web-mcp-shared`
+### Added — `web-page-mcp-shared`
 - Protocol v1 constants, Zod schemas, `parseMessage / serializeMessage`, frozen error-code enum.
 
 ### Added — tooling

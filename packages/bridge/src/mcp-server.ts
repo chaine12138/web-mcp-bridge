@@ -9,7 +9,7 @@ import {
   PROTOCOL_VERSION,
   TARGET_ROUTING_HINT,
   TOOL_NAMESPACE_SEP,
-} from 'web-mcp-shared';
+} from 'web-page-mcp-shared';
 import type { Logger } from './logger.js';
 import type { SessionRegistry } from './registry.js';
 import type { CallRouter } from './router.js';
@@ -40,7 +40,7 @@ export class McpBridgeServer {
 
   constructor(private readonly opts: McpServerOptions) {
     this.server = new Server(
-      { name: 'web-mcp-bridge', version: '0.1.0' },
+      { name: 'web-page-mcp-bridge', version: '0.1.0' },
       { capabilities: { tools: { listChanged: true } } }
     );
 

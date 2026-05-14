@@ -1,5 +1,5 @@
 /**
- * Browser SDK for web-mcp-bridge.
+ * Browser SDK for web-page-mcp-bridge.
  *
  * Entry point is the `createAgentTool` factory. It:
  *   1. Validates options synchronously (throws InvalidAgentToolOptionsError).

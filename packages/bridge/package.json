@@ -1,12 +1,12 @@
 {
-  "name": "web-mcp-bridge",
-  "version": "0.1.0",
+  "name": "web-page-mcp-bridge",
+  "version": "1.0.0",
   "type": "module",
   "description": "Local MCP server that forwards tool calls to in-browser host apps over WebSocket.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "web-mcp-bridge": "./dist/cli.js"
+    "web-page-mcp-bridge": "./dist/cli.js"
   },
   "exports": {
     ".": {
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "web-mcp-shared": "workspace:*",
+    "web-page-mcp-shared": "workspace:*",
     "ws": "^8.18.0",
     "zod": "^3.23.8"
   },

@@ -1,6 +1,6 @@
 import type { ZodTypeAny } from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
-import type { ToolDescriptor } from 'web-mcp-shared';
+import type { ToolDescriptor } from 'web-page-mcp-shared';
 import { DuplicateToolError, InvalidAgentToolOptionsError } from './errors.js';
 
 /**

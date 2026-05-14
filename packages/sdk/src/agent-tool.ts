@@ -3,7 +3,7 @@ import {
   buildErrorPayload,
   type Message,
   type ToolCallMessage,
-} from 'web-mcp-shared';
+} from 'web-page-mcp-shared';
 import {
   createConnection,
   type ConnectionHandle,

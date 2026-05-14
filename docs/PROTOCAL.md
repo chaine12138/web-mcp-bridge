@@ -1,4 +1,4 @@
-# web-mcp-bridge Protocol v1
+# web-page-mcp-bridge Protocol v1
 
 **Status**: frozen (v1). Breaking changes require bumping `PROTOCOL_VERSION` and negotiating at handshake time.
 

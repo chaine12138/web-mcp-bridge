@@ -32,7 +32,7 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.0.0
         version: 1.29.0(zod@3.25.76)
-      'web-mcp-shared':
+      'web-page-mcp-shared':
         specifier: workspace:*
         version: link:../shared
       ws:
@@ -54,7 +54,7 @@ importers:
 
   packages/sdk:
     dependencies:
-      'web-mcp-shared':
+      'web-page-mcp-shared':
         specifier: workspace:*
         version: link:../shared
       zod-to-json-schema:

@@ -1,5 +1,5 @@
 /**
- * Wire-level protocol constants shared between web-mcp-bridge and web-mcp-sdk.
+ * Wire-level protocol constants shared between web-page-mcp-bridge and web-page-mcp-sdk.
  * These are frozen at v1; bumping them requires a PROTOCOL_VERSION change.
  */
 

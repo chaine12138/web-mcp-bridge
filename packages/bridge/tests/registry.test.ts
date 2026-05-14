@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { createLogger } from '../src/logger.js';
 import { SessionRegistry, type SessionHandle } from '../src/registry.js';
-import { SOFT_OFFLINE_MS } from 'web-mcp-shared';
+import { SOFT_OFFLINE_MS } from 'web-page-mcp-shared';
 
 function makeHandle(appId: string, instanceId: string): SessionHandle {
   return {
