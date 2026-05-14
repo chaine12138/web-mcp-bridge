@@ -1,0 +1,29 @@
+{
+  "name": "@web-mcp/bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bridge local MCP server and in-browser host apps via WebSocket, so AI agents can call business APIs the host explicitly registers.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r --parallel test",
+    "lint": "eslint 'packages/*/src/**/*.ts'",
+    "format": "prettier --write 'packages/*/src/**/*.{ts,tsx,md}'",
+    "validate": "openspec validate --all --strict --no-interactive"
+  },
+  "devDependencies": {
+    "@rollup/rollup-darwin-arm64": "^4.60.3",
+    "@types/node": "^20.12.12",
+    "eslint": "^9.9.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

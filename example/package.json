@@ -1,0 +1,21 @@
+{
+  "name": "@web-mcp/e2e",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "End-to-end smoke test: boot a bridge and a fake SDK over WebSocket, round-trip a tool call.",
+  "scripts": {
+    "run": "node --experimental-vm-modules --import tsx/esm ./src/main.ts"
+  },
+  "dependencies": {
+    "@web-mcp/bridge": "workspace:*",
+    "@web-mcp/shared": "workspace:*",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/ws": "^8.5.12",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
