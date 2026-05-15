@@ -147,4 +147,4 @@ The WebSocket protocol v1 is frozen in [`docs/PROTOCOL.md`](./docs/PROTOCOL.md).
 - Host tools run in the browser; their blast radius is whatever DOM / app state their handlers touch.
 
 ## License
-Proprietary — © 2026 Aliyun-com. All rights reserved.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
