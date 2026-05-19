@@ -1,6 +1,6 @@
 {
   "name": "web-page-mcp-shared",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Shared protocol types, constants and zod schemas used by web-page-mcp-bridge and web-page-mcp-sdk.",
   "main": "dist/index.js",
