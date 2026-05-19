@@ -1,6 +1,6 @@
 {
   "name": "web-page-mcp-bridge",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Local MCP server that forwards tool calls to in-browser host apps over WebSocket.",
   "main": "dist/index.js",

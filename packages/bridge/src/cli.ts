@@ -173,7 +173,7 @@ const invokedDirectly =
   typeof process !== 'undefined' &&
   Array.isArray(process.argv) &&
   process.argv[1] &&
-  /cli\.(js|ts)$/.test(process.argv[1]);
+  /(cli\.(js|ts)|web-page-mcp-bridge)$/.test(process.argv[1]);
 
 if (invokedDirectly) {
   void main();
