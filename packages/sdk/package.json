@@ -1,6 +1,6 @@
 {
   "name": "web-page-mcp-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Browser SDK that exposes window.agent_tool.registerTool and talks to web-page-mcp-bridge over WebSocket.",
   "main": "dist/index.js",
@@ -32,6 +32,7 @@
     "vitest": "^2.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "replaceWorkspaceProtocal": true
   }
 }
